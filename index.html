@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="https://saptetroi.tk/icon.png" />
+    <title>Tổng hợp kiến thức về CSS Selectors</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Tổng hợp kiến thức về CSS Selectors</h1>
+        <p class="text-center">Hướng dẫn toàn diện về các CSS selectors.</p>
+        
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Selector</th>
+                        <th>Ví dụ</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>.class</td>
+                        <td>.intro</td>
+                        <td>Lựa chọn tất cả các phần tử có class="intro".</td>
+                    </tr>
+                    <tr>
+                        <td>.class1.class2</td>
+                        <td>.name1.name2</td>
+                        <td>Lựa chọn tất cả các phần tử có cả name1 và name2 trong class.</td>
+                    </tr>
+                    <tr>
+                        <td>.class1 .class2</td>
+                        <td>.name1 .name2</td>
+                        <td>Lựa chọn tất cả các phần tử có name2 là con cháu của name1.</td>
+                    </tr>
+                    <tr>
+                        <td>#id</td>
+                        <td>#firstname</td>
+                        <td>Lựa chọn phần tử có id="firstname".</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>*</td>
+                        <td>Lựa chọn tất cả các phần tử.</td>
+                    </tr>
+                    <tr>
+                        <td>element</td>
+                        <td>p</td>
+                        <td>Lựa chọn tất cả phần tử &lt;p&gt;.</td>
+                    </tr>
+                    <tr>
+                        <td>element.class</td>
+                        <td>p.intro</td>
+                        <td>Lựa chọn tất cả phần tử &lt;p&gt; có class="intro".</td>
+                    </tr>
+                    <tr>
+                        <td>element,element</td>
+                        <td>div, p</td>
+                        <td>Lựa chọn tất cả phần tử &lt;div&gt; và tất cả phần tử &lt;p&gt;.</td>
+                    </tr>
+                    <tr>
+                        <td>element element</td>
+                        <td>div p</td>
+                        <td>Lựa chọn tất cả phần tử &lt;p&gt; nằm bên trong phần tử &lt;div&gt;.</td>
+                    </tr>
+                    <tr>
+                        <td>element&gt;element</td>
+                        <td>div &gt; p</td>
+                        <td>Lựa chọn tất cả phần tử &lt;p&gt; có phần tử cha là &lt;div&gt;.</td>
+                    </tr>
+                    <tr>
+                        <td>element+element</td>
+                        <td>div + p</td>
+                        <td>Lựa chọn phần tử &lt;p&gt; đầu tiên ngay sau các phần tử &lt;div&gt;.</td>
+                    </tr>
+                    <tr>
+                        <td>element1~element2</td>
+                        <td>p ~ ul</td>
+                        <td>Lựa chọn mọi phần tử &lt;ul&gt; đi sau một phần tử &lt;p&gt;.</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute]</td>
+                        <td>[target]</td>
+                        <td>Lựa chọn tất cả phần tử có thuộc tính target.</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute=value]</td>
+                        <td>[target="_blank"]</td>
+                        <td>Lựa chọn tất cả phần tử có thuộc tính target="blank".</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute~=value]</td>
+                        <td>[title~="flower"]</td>
+                        <td>Lựa chọn tất cả phần tử có thuộc tính title chứa từ "flower".</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute|=value]</td>
+                        <td>[lang|="en"]</td>
+                        <td>Lựa chọn tất cả phần tử có thuộc tính lang giống "en" hoặc bắt đầu bằng "en-".</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute^=value]</td>
+                        <td>a[href^="https"]</td>
+                        <td>Lựa chọn mọi phần tử &lt;a&gt; có thuộc tính href bắt đầu bằng "https".</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute$=value]</td>
+                        <td>a[href$=".pdf"]</td>
+                        <td>Lựa chọn mọi phần tử &lt;a&gt; có thuộc tính href kết thúc bằng ".pdf".</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute*=value]</td>
+                        <td>a[href*="w3schools"]</td>
+                        <td>Lựa chọn mọi phần tử &lt;a&gt; có thuộc tính href chứa "w3schools".</td>
+                    </tr>
+                    <tr>
+                        <td>:active</td>
+                        <td>a:active</td>
+                        <td>Lựa chọn liên kết đang được nhấn.</td>
+                    </tr>
+                    <tr>
+                        <td>::after</td>
+                        <td>p::after</td>
+                        <td>Chèn nội dung sau nội dung mỗi phần tử &lt;p&gt;.</td>
+                    </tr>
+                    <tr>
+                        <td>::before</td>
+                        <td>p::before</td>
+                        <td>Chèn nội dung trước nội dung mỗi phần tử &lt;p&gt;.</td>
+                    </tr>
+                    <tr>
+                        <td>:checked</td>
+                        <td>input:checked</td>
+                        <td>Lựa chọn mọi phần tử &lt;input&gt; đã được chọn.</td>
+                    </tr>
+                    <tr>
+                        <td>:disabled</td>
+                        <td>input:disabled</td>
+                        <td>Lựa chọn mọi phần tử &lt;input&gt; bị vô hiệu hóa.</td>
+                    </tr>
+                    <tr>
+                        <td>:empty</td>
+                        <td>p:empty</td>
+                        <td>Lựa chọn mọi phần tử &lt;p&gt; không có phần tử con.</td>
+                    </tr>
+                    <tr>
+                        <td>:enabled</td>
+                        <td>input:enabled</td>
+                        <td>Lựa chọn mọi phần tử &lt;input&gt; được kích hoạt.</td>
+                    </tr>
+                    <tr>
+                        <td>:first-child</td>
+                        <td>p:first-child</td>
+                        <td>Lựa chọn mọi phần tử &lt;p&gt; là con đầu tiên của cha nó.</td>
+                    </tr>
+                    <tr>
+                        <td>:first-of-type</td>
+                        <td>p:first-of-type</td>
+                        <td>Lựa chọn mọi phần tử &lt;p&gt; đầu tiên của loại của nó trong cha.</td>
+                    </tr>
+                    <tr>
+                        <td>:focus</td>
+                        <td>input:focus</td>
+                        <td>Lựa chọn phần tử &lt;input&gt; đang có trạng thái focus.</td>
+                    </tr>
+                    <tr>
+                        <td>:fullscreen</td>
+                        <td>:fullscreen</td>
+                        <td>Lựa chọn phần tử đang ở chế độ toàn màn hình.</td>
+                    </tr>
+                    <tr>
+                        <td>:hover</td>
+                        <td>a:hover</td>
+                        <td>Lựa chọn liên kết khi chuột di chuyển qua.</td>
+                    </tr>
+                    <tr>
+                        <td>:in-range</td>
+                        <td>input:in-range</td>
+                        <td>Lựa chọn phần tử &lt;input&gt; có giá trị trong khoảng cho phép.</td>
+                    </tr>
+                    <tr>
+                        <td>:indeterminate</td>
+                        <td>input:indeterminate</td>
+                        <td>Lựa chọn phần tử &lt;input&gt; đang ở trạng thái không xác định.</td>
+                    </tr>
+                    <tr>
+                        <td>:invalid</td>
+                        <td>input:invalid</td>
+                        <td>Lựa chọn mọi phần tử &lt;input&gt; có giá trị không hợp lệ.</td>
+                    </tr>
+                    <tr>
+                        <td>:lang(language)</td>
+                        <td>p:lang(it)</td>
+                        <td>Lựa chọn mọi phần tử &lt;p&gt; có thuộc tính lang bằng "it" (Italian).</td>
+                    </tr>
+                    <tr>
+                        <td>:last-child</td>
+                        <td>p:last-child</td>
+                        <td>Lựa chọn mọi phần tử &lt;p&gt; là con cuối cùng của cha nó.</td>
+                    </tr>
+                    <tr>
+                        <td>:last-of-type</td>
+                        <td>p:last-of-type</td>
+                        <td>Lựa chọn mọi phần tử &lt;p&gt; cuối cùng của loại của nó trong cha.</td>
+                    </tr>
+                    <tr>
+                        <td>:link</td>
+                        <td>a:link</td>
+                        <td>Lựa chọn tất cả liên kết chưa được truy cập.</td>
+                    </tr>
+                    <tr>
+                        <td>::marker</td>
+                        <td>::marker</td>
+                        <td>Lựa chọn các dấu đánh dấu của các mục trong danh sách.</td>
+                    </tr>
+                    <tr>
+                        <td>:not(selector)</td>
+                        <td>:not(p)</td>
+                        <td>Lựa chọn mọi phần tử không phải là phần tử &lt;p&gt;.</td>
+                    </tr>
+                    <tr>
+                        <td>:nth-child(n)</td>
+                        <td>p:nth-child(2)</td>
+                        <td>Lựa chọn mọi phần tử &lt;p&gt; là con thứ 2 của cha nó.</td>
+                    </tr>
+                    <tr>
+                        <td>:nth-last-child(n)</td>
+                        <td>p:nth-last-child(2)</td>
+                        <td>Lựa chọn mọi phần tử &lt;p&gt; là con thứ 2 từ cuối của cha nó.</td>
+                    </tr>
+                    <tr>
+                        <td>:nth-last-of-type(n)</td>
+                        <td>p:nth-last-of-type(2)</td>
+                        <td>Lựa chọn mọi phần tử &lt;p&gt; là phần tử thứ 2 từ cuối của loại của nó trong cha.</td>
+                    </tr>
+                    <tr>
+                        <td>:nth-of-type(n)</td>
+                        <td>p:nth-of-type(2)</td>
+                        <td>Lựa chọn mọi phần tử &lt;p&gt; là phần tử thứ 2 của loại của nó trong cha.</td>
+                    </tr>
+                    <tr>
+                        <td>:only-child</td>
+                        <td>p:only-child</td>
+                        <td>Lựa chọn mọi phần tử &lt;p&gt; là con duy nhất của cha nó.</td>
+                    </tr>
+                    <tr>
+                        <td>:only-of-type</td>
+                        <td>p:only-of-type</td>
+                        <td>Lựa chọn mọi phần tử &lt;p&gt; là phần tử duy nhất của loại của nó trong cha.</td>
+                    </tr>
+                    <tr>
+                        <td>:optional</td>
+                        <td>input:optional</td>
+                        <td>Lựa chọn phần tử &lt;input&gt; không có thuộc tính "required".</td>
+                    </tr>
+                    <tr>
+                        <td>:out-of-range</td>
+                        <td>input:out-of-range</td>
+                        <td>Lựa chọn phần tử &lt;input&gt; có giá trị ngoài khoảng cho phép.</td>
+                    </tr>
+                    <tr>
+                        <td>::placeholder</td>
+                        <td>input::placeholder</td>
+                        <td>Lựa chọn phần tử &lt;input&gt; có thuộc tính "placeholder".</td>
+                    </tr>
+                    <tr>
+                        <td>:read-only</td>
+                        <td>input:read-only</td>
+                        <td>Lựa chọn phần tử &lt;input&gt; có thuộc tính "readonly".</td>
+                    </tr>
+                    <tr>
+                        <td>:read-write</td>
+                        <td>input:read-write</td>
+                        <td>Lựa chọn phần tử &lt;input&gt; không có thuộc tính "readonly".</td>
+                    </tr>
+                    <tr>
+                        <td>:required</td>
+                        <td>input:required</td>
+                        <td>Lựa chọn phần tử &lt;input&gt; có thuộc tính "required".</td>
+                    </tr>
+                    <tr>
+                        <td>:root</td>
+                        <td>:root</td>
+                        <td>Lựa chọn phần tử gốc của tài liệu.</td>
+                    </tr>
+                    <tr>
+                        <td>::selection</td>
+                        <td>::selection</td>
+                        <td>Lựa chọn phần được người dùng chọn trong phần tử.</td>
+                    </tr>
+                    <tr>
+                        <td>:target</td>
+                        <td>#news:target</td>
+                        <td>Lựa chọn phần tử #news đang được chọn trong URL.</td>
+                    </tr>
+                    <tr>
+                        <td>:valid</td>
+                        <td>input:valid</td>
+                        <td>Lựa chọn tất cả phần tử &lt;input&gt; có giá trị hợp lệ.</td>
+                    </tr>
+                    <tr>
+                        <td>:visited</td>
+                        <td>a:visited</td>
+                        <td>Lựa chọn tất cả liên kết đã được truy cập.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
